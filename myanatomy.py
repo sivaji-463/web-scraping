@@ -173,4 +173,3 @@ for class_name in class_names:
         for c,j_t,j_l,d,t_l in zip(companies,job_title,location,date,tests):
             csv_printer.writerow([c,j_t,j_l,d,t_l])
         print('Successfully added')
-
