@@ -62,21 +62,19 @@ print(f'{employees_in_linkedin} {len(employees_in_linkedin)}')
 print(f'{company_size} {len(company_size)}')
 time.sleep(2)
 driver.quit()
-
-
-
-# os.chdir('d://python//web_scrapping')
-# import csv
-# if os.path.isfile('IOT_Companies.csv'):
-#     print('file found')
-# else:
-#     with open('IOT_Companies.csv','x') as f:
-#         pass
-# with open('IOT_Companies.csv','a',encoding='utf-8',newline='') as f:
-#     csv_print = csv.writer(f)
-#     file_empty = os.stat('IOT_Companies.csv').st_size == 0
-#     if file_empty:
-#         csv_print.writerow(['Company_name','Company_website','Company_size','Linkedin_employees'])
-#     for name,web,size,linkedin in zip(company_names,company_websites,company_size,employees_in_linkedin):
-#         csv_print.writerow([name,web,size,linkedin])
-#     print('Successfully added')
+###########  EXPORT TO CSV FILE ########
+os.chdir('d://python//web_scrapping')
+import csv
+if os.path.isfile('IOT_Companies.csv'):
+    print('file found')
+else:
+    with open('IOT_Companies.csv','x') as f:
+        pass
+with open('IOT_Companies.csv','a',encoding='utf-8',newline='') as f:
+    csv_print = csv.writer(f)
+    file_empty = os.stat('IOT_Companies.csv').st_size == 0
+    if file_empty:
+        csv_print.writerow(['Company_name','Company_website','Company_size','Linkedin_employees'])
+    for name,web,size,linkedin in zip(company_names,company_websites,company_size,employees_in_linkedin):
+        csv_print.writerow([name,web,size,linkedin])
+    print('Successfully added')
