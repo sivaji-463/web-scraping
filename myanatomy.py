@@ -52,12 +52,12 @@ soup = BeautifulSoup(driver.page_source,'html.parser')
 #         pass
 # with open('jobs_live_myanatomy.csv','a',encoding='utf-8') as f:
 #     csv_printer = csv.writer(f)
-#     file_empty = os.stat('jobs_live_myanatomy.csv').st_size == 0
-#     if file_empty:
-#         csv_printer.writerow(['Company_name','Job_title','Job_location','Date','Test_link'])
-#     for c,j_t,j_l,d,t_l in zip(companies,job_title,location,date,tests):
-#         csv_printer.writerow([c,j_t,j_l,d,t_l])
-#     print('Successfully added')
+    # file_empty = os.stat('jobs_live_myanatomy.csv').st_size == 0
+    # if file_empty:
+    #     csv_printer.writerow(['Company_name','Job_title','Job_location','Date','Test_link'])
+    # for c,j_t,j_l,d,t_l in zip(companies,job_title,location,date,tests):
+    #     csv_printer.writerow([c,j_t,j_l,d,t_l])
+    # print('Successfully added')
 
 ################# previous jobs ##########
 # previous_events = soup.find_all('div',{'class':'previous'})
